@@ -20,7 +20,7 @@ EnvironVariablesDict = {"SGE_ROOT":"/usr/local/ge2011.11/",\
                         "FSLDIR":"/opt/fsl",\
                         "scripts_path":"Scripts",\
                         "MRTrixDIR":"/opt/mrtrix2/bin",\
-                        "MRTrix3DIR":"/home/jwang/local/MRtrix3bin",\
+                        "MRTrix3DIR":"/opt/mtrrix3/bin",\
                         "FSLSUBALREADYRUN":"true"}
 
 PathList = ["/home/jwang/codes/fsl/bin:/opt/afni:/usr/local/ge2011.11/bin/linux-x64:/sbin"]
@@ -49,7 +49,7 @@ script_dict = {
 echo \"*************************************************************\"\n \
 echo \"***               TVB empirical data pipeline             ***\" \n \
 echo \"*************************************************************\"\n\
-unset SGE_ROOT \n",
+#unset SGE_ROOT \n",
 
 "T1 Prerocessing with FreeSurfer":"echo \"************ T1 preprocessing with FreeSurfer *******\"\n\
 ${scripts_path}/FreeSurfer_recon-all.sh \n ",
