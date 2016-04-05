@@ -56,7 +56,9 @@ mkdir -p ${subFolder}/${subID}/calc_images
 cd ${subFolder}/${subID}/calc_images
 mri_surf2vol --hemi lh --mkmask --template $T1 --o lh_white.nii --sd ${subFolder}/${subID} --identity recon_all
 mri_surf2vol --hemi rh --mkmask --merge lh_white.nii --o wm_outline.nii --sd ${subFolder}/${subID} --identity recon_all
-#(commented out by authors)mri_convert --in_orientation LIA --out_orientation RAS wm_outline.nii wm_outline.nii
+#(commented out by authors)
+
+mri_convert --in_orientation LIA --out_orientation RAS wm_outline.nii wm_outline.nii
 
 echo "*** Rotations/Translations ***"
 lowb=${subFolder}/${subID}/dt_recon/lowb.nii
